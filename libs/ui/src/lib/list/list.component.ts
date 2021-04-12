@@ -1,13 +1,4 @@
-import {
-  AfterContentInit,
-  ChangeDetectionStrategy,
-  Component,
-  ContentChildren,
-  Input,
-  OnInit,
-  QueryList
-} from '@angular/core';
-import { ListItemComponent } from './list-item/list-item.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'ngm-list',
@@ -15,7 +6,7 @@ import { ListItemComponent } from './list-item/list-item.component';
   styleUrls: ['./list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListComponent implements AfterContentInit {
+export class ListComponent {
 
   constructor() {}
 }
