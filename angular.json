@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/anti-patterns",
       "sourceRoot": "apps/anti-patterns/src",
-      "prefix": "angular-mastery",
+      "prefix": "ngm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -142,6 +142,28 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/anti-patterns-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "ngm",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui"],
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

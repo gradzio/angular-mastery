@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/anti-patterns'],
+  projects: ['<rootDir>/apps/anti-patterns', '<rootDir>/libs/ui'],
 };
