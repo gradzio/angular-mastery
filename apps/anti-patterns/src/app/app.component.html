@@ -1,3 +1,6 @@
+<h1>Anti-Patterns</h1>
+
+<h2>Domain Presentation</h2>
 <ngm-list>
   <ngm-list-item
     *ngFor='let product of products$ | async'>
@@ -7,3 +10,6 @@
 <ngm-list>
   <ngm-list-item *ngFor='let user of users$ | async'>{{user.email}}</ngm-list-item>
 </ngm-list>
+
+<h2>Event Bubbling</h2>
+<ngm-smart></ngm-smart>
