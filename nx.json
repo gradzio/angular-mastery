@@ -17,6 +17,9 @@
       "tags": [],
       "implicitDependencies": ["anti-patterns"]
     },
-    "ui": { "tags": [] }
+    "ui": { "tags": [] },
+    "spaghetti-code-users": { "tags": [] },
+    "spaghetti-code-posts": { "tags": [] },
+    "spaghetti-code-comments": { "tags": [] }
   }
 }

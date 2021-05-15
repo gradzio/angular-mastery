@@ -15,7 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-mastery/ui": ["libs/ui/src/index.ts"]
+      "@angular-mastery/ui": ["libs/ui/src/index.ts"],
+      "@angular-mastery/spaghetti-code/users": [
+        "libs/spaghetti-code/users/src/index.ts"
+      ],
+      "@angular-mastery/spaghetti-code/posts": [
+        "libs/spaghetti-code/posts/src/index.ts"
+      ],
+      "@angular-mastery/spaghetti-code/comments": [
+        "libs/spaghetti-code/comments/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

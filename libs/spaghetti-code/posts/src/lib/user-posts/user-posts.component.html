@@ -1,0 +1,17 @@
+<mat-card *ngFor='let post of userPosts$ | async' style='max-width: 400px; margin: 10px auto'>
+  <mat-card-header>
+    <img matCardAvatar [src]='post.user.avatar' [alt]='post.user.email'>
+    <mat-card-title>{{post.content}}</mat-card-title>
+    <mat-card-subtitle>{{post.user.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="post.image" [alt]="post.content">
+  <mat-card-content>
+    <h3>Comments</h3>
+    <mat-list *ngFor='let comment of getPostComments(post.id) | async'>
+      <mat-list-item>
+        <img matListAvatar [src]='comment.user.avatar' [alt]='comment.user.email'>
+        <p matSubheader>{{comment.message}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

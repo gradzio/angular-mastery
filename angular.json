@@ -51,7 +51,7 @@
               "apps/anti-patterns/src/favicon.ico",
               "apps/anti-patterns/src/assets"
             ],
-            "styles": ["apps/anti-patterns/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/anti-patterns/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -163,6 +163,81 @@
           "outputs": ["coverage/libs/ui"],
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "spaghetti-code-users": {
+      "projectType": "library",
+      "root": "libs/spaghetti-code/users",
+      "sourceRoot": "libs/spaghetti-code/users/src",
+      "prefix": "angular-mastery",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/spaghetti-code/users/src/**/*.ts",
+              "libs/spaghetti-code/users/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/spaghetti-code/users"],
+          "options": {
+            "jestConfig": "libs/spaghetti-code/users/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "spaghetti-code-posts": {
+      "projectType": "library",
+      "root": "libs/spaghetti-code/posts",
+      "sourceRoot": "libs/spaghetti-code/posts/src",
+      "prefix": "angular-mastery",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/spaghetti-code/posts/src/**/*.ts",
+              "libs/spaghetti-code/posts/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/spaghetti-code/posts"],
+          "options": {
+            "jestConfig": "libs/spaghetti-code/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "spaghetti-code-comments": {
+      "projectType": "library",
+      "root": "libs/spaghetti-code/comments",
+      "sourceRoot": "libs/spaghetti-code/comments/src",
+      "prefix": "angular-mastery",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/spaghetti-code/comments/src/**/*.ts",
+              "libs/spaghetti-code/comments/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/spaghetti-code/comments"],
+          "options": {
+            "jestConfig": "libs/spaghetti-code/comments/jest.config.js",
             "passWithNoTests": true
           }
         }
