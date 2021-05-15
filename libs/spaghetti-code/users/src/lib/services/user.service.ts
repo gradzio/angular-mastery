@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { Post, PostService } from '../../../../posts/src/lib/services/post.service';
 
 export interface User {
   email: string;
@@ -17,10 +18,22 @@ export class UserService {
     { email: 'user2@gmail.com', avatar: 'https://cdn.iconscout.com/icon/free/png-256/avatar-367-456319.png' },
   ];
 
-  getByEmail(email: string): Observable<User[]> {
-    return of(this.usersData).pipe(
-      map(users => users.filter(user => user.email === email))
-    );
+  public userEmail = new BehaviorSubject(null);
+
+  constructor(private postService: PostService) {}
+
+  getUserPosts(): Observable<Post[]> {
+    return this.postService.getAll()
+      .pipe(
+        map(posts => posts
+          .filter(post => post.writerEmail === this.userEmail.getValue())
+          .map(post => ({...post, user: this.usersData.find(user => user.email === post.writerEmail)}))
+        )
+      )
+  }
+
+  setUserEmail(userEmail: string) {
+    this.userEmail.next(userEmail);
   }
 
   getByEmails(emails: string[]): Observable<User[]> {

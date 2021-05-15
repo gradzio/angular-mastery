@@ -6,12 +6,13 @@
   </mat-card-header>
   <img mat-card-image [src]="post.image" [alt]="post.content">
   <mat-card-content>
-    <h3>Comments</h3>
-    <mat-list *ngFor='let comment of getPostComments(post.id) | async'>
-      <mat-list-item>
-        <img matListAvatar [src]='comment.user.avatar' [alt]='comment.user.email'>
-        <p matSubheader>{{comment.message}}</p>
-      </mat-list-item>
-    </mat-list>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque faucibus placerat. Vestibulum volutpat tortor orci, pellentesque lacinia ante faucibus at. Vivamus ut odio ac nibh feugiat aliquet id ac quam. Integer eget ipsum a nisi convallis euismod. Nunc urna dui, pharetra eget posuere at, consectetur suscipit enim. Nulla et est ornare, luctus ante et, fringilla magna. Cras convallis mollis justo. Nulla facilisi. Etiam sed tortor eget est scelerisque gravida in aliquet nulla.
+
+    Morbi rutrum nulla in ultricies varius. Donec sed eleifend augue. In hac habitasse platea dictumst. Duis tincidunt tortor sit amet dolor scelerisque, suscipit laoreet libero condimentum. Nullam vel egestas purus, sit amet mollis ex. Pellentesque tincidunt metus non vehicula faucibus. Maecenas tempus odio id elit imperdiet, a pretium mi condimentum. Ut quis quam mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum rhoncus ac tortor sit amet auctor. Sed ac leo sed nisi rutrum gravida sit amet non risus. Integer hendrerit metus augue, id commodo tortor malesuada a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquam feugiat augue, in sodales mauris sagittis ut. Suspendisse aliquam, mi eget luctus egestas, eros turpis cursus urna, ut bibendum lorem metus sit amet elit. Quisque accumsan dui sit amet erat porta, et varius neque porttitor.
+
+    Phasellus orci lorem, facilisis ac purus id, placerat vehicula sapien. Sed eu volutpat purus, ac porta eros. Donec convallis pellentesque massa nec elementum. Suspendisse potenti. Nullam suscipit urna libero, vel convallis sapien aliquam ut. Aenean vestibulum viverra tincidunt. Aliquam ac quam accumsan metus vehicula hendrerit. Etiam fringilla venenatis diam, at pellentesque magna molestie sit amet. Mauris feugiat posuere quam eu pellentesque.
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)='backToList()'>Back to list</button>
+  </mat-card-actions>
 </mat-card>
