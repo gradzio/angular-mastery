@@ -20,6 +20,7 @@
     "ui": { "tags": [] },
     "spaghetti-code-users": { "tags": [] },
     "spaghetti-code-posts": { "tags": [] },
-    "spaghetti-code-comments": { "tags": [] }
+    "spaghetti-code-comments": { "tags": [] },
+    "statefull-service": { "tags": [] }
   }
 }

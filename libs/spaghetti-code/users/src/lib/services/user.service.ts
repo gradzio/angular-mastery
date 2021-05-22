@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Post, PostService } from '../../../../posts/src/lib/services/post.service';
 
 export interface User {
   email: string;
   avatar: string;
+  posts?: Post[];
 }
 
 @Injectable({
@@ -13,7 +14,7 @@ export interface User {
 })
 export class UserService {
 
-  private usersData = [
+  private usersData: User[] = [
     { email: 'user1@gmail.com', avatar: 'https://cdn.iconscout.com/icon/free/png-256/avatar-366-456318.png' },
     { email: 'user2@gmail.com', avatar: 'https://cdn.iconscout.com/icon/free/png-256/avatar-367-456319.png' },
   ];
@@ -22,12 +23,15 @@ export class UserService {
 
   constructor(private postService: PostService) {}
 
-  getUserPosts(): Observable<Post[]> {
+  getUserPosts(): Observable<User> {
+    const user = this.usersData.find(user => user.email === this.userEmail.getValue());
     return this.postService.getAll()
       .pipe(
-        map(posts => posts
-          .filter(post => post.writerEmail === this.userEmail.getValue())
-          .map(post => ({...post, user: this.usersData.find(user => user.email === post.writerEmail)}))
+        map(posts => ({
+          ...user,
+          posts: posts
+            .filter(post => post.writerEmail === this.userEmail.getValue())
+          })
         )
       )
   }

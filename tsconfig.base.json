@@ -24,6 +24,9 @@
       ],
       "@angular-mastery/spaghetti-code/comments": [
         "libs/spaghetti-code/comments/src/index.ts"
+      ],
+      "@angular-mastery/statefull-service": [
+        "libs/statefull-service/src/index.ts"
       ]
     }
   },

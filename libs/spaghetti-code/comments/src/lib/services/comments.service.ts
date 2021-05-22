@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { forkJoin, Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { User, UserService } from '../../../../users/src/lib/services/user.service';
-import { concatMap, map, switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 export interface Comment {
   message: string;

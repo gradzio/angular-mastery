@@ -1,4 +1,3 @@
-{{ showList$ |async | json}}
 <ng-container *ngIf='showList$ |async else showDetail'>
   <mat-card *ngFor='let post of posts$ | async' style='max-width: 400px; margin: 10px auto' >
     <mat-card-header>
@@ -17,7 +16,7 @@
       </mat-list>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button (click)='readMore(post.user.email)'>Read more</button>
+      <button mat-raised-button (click)='readMore(post.user.email)'>Read all user's articles</button>
     </mat-card-actions>
   </mat-card>
 </ng-container>

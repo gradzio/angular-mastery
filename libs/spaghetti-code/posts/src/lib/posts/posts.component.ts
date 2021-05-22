@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { map, switchMap } from 'rxjs/operators';
-import { PostService } from '../services/post.service';
-import { UserService } from '../../../../users/src/lib/services/user.service';
+import { Post, PostService } from '../services/post.service';
+import { User, UserService } from '../../../../users/src/lib/services/user.service';
 import { Comment, CommentsService } from '../../../../comments/src/lib/services/comments.service';
 import { Observable } from 'rxjs';
 
@@ -17,8 +17,8 @@ export class PostsComponent {
       switchMap(posts =>
         this.userService.getAll()
           .pipe(
-            map(users =>
-              posts.map(post =>
+            map((users: User[]) =>
+              posts.map((post: Post) =>
                 ({
                   ...post,
                   user: users.find(user => user.email === post.writerEmail)
