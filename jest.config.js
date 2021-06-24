@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/spaghetti-code/posts',
     '<rootDir>/libs/spaghetti-code/comments',
     '<rootDir>/libs/statefull-service',
+    '<rootDir>/libs/registry-pattern',
   ],
 };

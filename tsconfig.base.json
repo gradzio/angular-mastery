@@ -27,6 +27,9 @@
       ],
       "@angular-mastery/statefull-service": [
         "libs/statefull-service/src/index.ts"
+      ],
+      "@angular-mastery/registry-pattern": [
+        "libs/registry-pattern/src/index.ts"
       ]
     }
   },

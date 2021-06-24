@@ -21,6 +21,7 @@
     "spaghetti-code-users": { "tags": [] },
     "spaghetti-code-posts": { "tags": [] },
     "spaghetti-code-comments": { "tags": [] },
-    "statefull-service": { "tags": [] }
+    "statefull-service": { "tags": [] },
+    "registry-pattern": { "tags": [] }
   }
 }

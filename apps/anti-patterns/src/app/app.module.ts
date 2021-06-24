@@ -5,10 +5,17 @@ import { AppComponent } from './app.component';
 import { UiModule } from '@angular-mastery/ui';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpaghettiCodePostsModule } from '@angular-mastery/spaghetti-code/posts';
+import { RegistryPatternModule } from '@angular-mastery/registry-pattern';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, UiModule, BrowserAnimationsModule, SpaghettiCodePostsModule],
+  imports: [
+    BrowserModule,
+    UiModule,
+    BrowserAnimationsModule,
+    SpaghettiCodePostsModule,
+    RegistryPatternModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

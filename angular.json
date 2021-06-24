@@ -270,6 +270,31 @@
           }
         }
       }
+    },
+    "registry-pattern": {
+      "projectType": "library",
+      "root": "libs/registry-pattern",
+      "sourceRoot": "libs/registry-pattern/src",
+      "prefix": "angular-mastery",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/registry-pattern/src/**/*.ts",
+              "libs/registry-pattern/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/registry-pattern"],
+          "options": {
+            "jestConfig": "libs/registry-pattern/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
