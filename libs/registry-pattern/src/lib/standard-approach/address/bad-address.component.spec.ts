@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddressComponent } from './address.component';
+import { BadAddressComponent } from './bad-address.component';
 
 describe('AddressComponent', () => {
-  let component: AddressComponent;
-  let fixture: ComponentFixture<AddressComponent>;
+  let component: BadAddressComponent;
+  let fixture: ComponentFixture<BadAddressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddressComponent ]
+      declarations: [ BadAddressComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddressComponent);
+    fixture = TestBed.createComponent(BadAddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,10 +3,10 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'registry-bad-personal-data',
-  templateUrl: './personal-data.component.html',
-  styleUrls: ['./personal-data.component.css']
+  templateUrl: './bad-personal-data.component.html',
+  styleUrls: ['./bad-personal-data.component.css']
 })
-export class PersonalDataComponent implements OnInit {
+export class BadPersonalDataComponent implements OnInit {
 
   @Input() form: FormGroup;
 

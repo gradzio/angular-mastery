@@ -1,5 +1,13 @@
+<h3>Standard approach:</h3>
 <registry-bad-credentials [form]='credentialsForm' (changed)='onCredentialsChanged($event)'></registry-bad-credentials>
 <registry-bad-address [form]='addressForm' (changed)='onAddressChanged($event)'></registry-bad-address>
 <registry-bad-personal-data [form]='personalDataForm' (changed)='onPersonalDataChanged($event)'></registry-bad-personal-data>
 <registry-bad-social-media [form]='socialMediaForm' (changed)='onSocialMediaChanged($event)'></registry-bad-social-media>
-<button mat-fab color='primary' (click)='sendIfCompleted()'><mat-icon>save</mat-icon></button>
+<button mat-fab color='primary' (click)='standardSendIfCompleted()'><mat-icon>save</mat-icon></button>
+
+<h3>Registry approach:</h3>
+<angular-mastery-credentials></angular-mastery-credentials>
+<angular-mastery-address></angular-mastery-address>
+<angular-mastery-personal-data></angular-mastery-personal-data>
+<angular-mastery-social-media></angular-mastery-social-media>
+<button mat-fab color='primary' (click)='registrySendIfCompleted()'><mat-icon>save</mat-icon></button>

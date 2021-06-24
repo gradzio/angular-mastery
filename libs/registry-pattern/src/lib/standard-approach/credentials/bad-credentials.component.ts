@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'registry-bad-social-media',
-  templateUrl: './social-media.component.html',
-  styleUrls: ['./social-media.component.css']
+  selector: 'registry-bad-credentials',
+  templateUrl: './bad-credentials.component.html',
+  styleUrls: ['./bad-credentials.component.css']
 })
-export class SocialMediaComponent implements OnInit {
+export class BadCredentialsComponent implements OnInit {
 
   @Input() form: FormGroup;
 

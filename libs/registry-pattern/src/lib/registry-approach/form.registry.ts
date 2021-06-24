@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FormRegistry {
-  private allForms: Map<string, FormGroup>
+  private allForms = new Map<string, FormGroup>();
   register(id: string, formData: FormGroup): void {
     this.allForms.set(id, formData);
   }

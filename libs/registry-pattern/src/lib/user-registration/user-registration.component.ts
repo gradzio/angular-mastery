@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { FormRegistry } from '../registry-approach/form.registry';
 
 @Component({
   selector: 'angular-mastery-user-registration',
@@ -31,43 +32,47 @@ export class UserRegistrationComponent {
     linkedin: new FormControl()
   });
 
-  allFormData = {
-    credentials: null,
-    address: null,
-    personalData: null,
-    socialMedia: null
-  }
+  allFormData = new Map<string, FormGroup>([
+    ['credentials', null], ['address', null], ['personalData', null], ['socialMedia', null]
+  ]);
+
+  constructor(private formRegistry: FormRegistry) {}
+
 
   onCredentialsChanged(credentialsForm: FormGroup) {
     if (credentialsForm.valid) {
-      this.allFormData.credentials = credentialsForm.value;
+      this.allFormData.set('credentials', credentialsForm);
     }
   }
 
   onAddressChanged(addressForm: FormGroup) {
     if (addressForm.valid) {
-      this.allFormData.address = addressForm.value;
+      this.allFormData.set('address', addressForm);
     }
   }
 
   onPersonalDataChanged(personalDataForm: FormGroup) {
     if (personalDataForm.valid) {
-      this.allFormData.personalData = personalDataForm.value;
+      this.allFormData.set('personalData', personalDataForm);
     }
   }
 
   onSocialMediaChanged(socialMediaForm: FormGroup) {
     if (socialMediaForm.valid) {
-      this.allFormData.socialMedia = socialMediaForm.value;
+      this.allFormData.set('socialMedia', socialMediaForm);
     }
   }
 
-  sendIfCompleted() {
-    if (this.allFormData.personalData && this.allFormData.address && this.allFormData.credentials && this.allFormData.socialMedia) {
+  standardSendIfCompleted() {
+    if (this.allFormData.get('personalData') && this.allFormData.get('address') && this.allFormData.get('credentials') && this.allFormData.get('socialMedia')) {
       console.log('Sent to the backend!', this.allFormData);
     } else {
       console.log('Some data is invalid! cannot send it')
     }
+  }
+
+  registrySendIfCompleted() {
+    this.formRegistry.sendIfCompleted();
   }
 
 }

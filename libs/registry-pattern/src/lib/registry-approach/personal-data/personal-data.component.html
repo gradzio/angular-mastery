@@ -1,1 +1,15 @@
-<p>personal-data works!</p>
+<h4>Personal Data</h4>
+<form [formGroup]='form'>
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName='firstName'>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName='lastName'>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName='title'>
+  </mat-form-field>
+</form>
