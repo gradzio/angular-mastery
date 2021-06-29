@@ -22,6 +22,7 @@
     "spaghetti-code-posts": { "tags": [] },
     "spaghetti-code-comments": { "tags": [] },
     "statefull-service": { "tags": [] },
-    "registry-pattern": { "tags": [] }
+    "registry-pattern": { "tags": [] },
+    "architectures-ssc": { "tags": [] }
   }
 }

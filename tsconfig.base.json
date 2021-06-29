@@ -30,6 +30,9 @@
       ],
       "@angular-mastery/registry-pattern": [
         "libs/registry-pattern/src/index.ts"
+      ],
+      "@angular-mastery/architectures/ssc": [
+        "libs/architectures/ssc/src/index.ts"
       ]
     }
   },

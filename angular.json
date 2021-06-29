@@ -295,6 +295,31 @@
           }
         }
       }
+    },
+    "architectures-ssc": {
+      "projectType": "library",
+      "root": "libs/architectures/ssc",
+      "sourceRoot": "libs/architectures/ssc/src",
+      "prefix": "angular-mastery",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/architectures/ssc/src/**/*.ts",
+              "libs/architectures/ssc/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/architectures/ssc"],
+          "options": {
+            "jestConfig": "libs/architectures/ssc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
