@@ -12,13 +12,13 @@ export class HttpProductsService implements GetsProducts {
   constructor(private client: HttpClient) {}
 
   getAll(): Observable<Product[]> {
-    return this.client.get<HasDataCollection<ProductAttributes>>(`/v1/products`)
+    return this.client.get<HasDataCollection<ProductAttributes>>(`/assets/v1/products/products.json`)
       .pipe(
         map(response => response.data.map( product => ({
           id: product.id,
           name: product.attributes.name,
           imageUrl: product.attributes.imageUrl,
-          price: product.attributes.priceInCents / 100,
+          price: product.attributes.price,
         })))
       );
   }

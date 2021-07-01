@@ -10,5 +10,5 @@ export interface HasDataCollection<T> {
 export interface ProductAttributes {
   name: string;
   imageUrl: string;
-  priceInCents: number;
+  price: string;
 }

@@ -6,6 +6,7 @@ import { UiModule } from '@angular-mastery/ui';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpaghettiCodePostsModule } from '@angular-mastery/spaghetti-code/posts';
 import { RegistryPatternModule } from '@angular-mastery/registry-pattern';
+import { ArchitecturesSscModule } from '@angular-mastery/architectures/ssc';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,8 @@ import { RegistryPatternModule } from '@angular-mastery/registry-pattern';
     UiModule,
     BrowserAnimationsModule,
     SpaghettiCodePostsModule,
-    RegistryPatternModule
+    RegistryPatternModule,
+    ArchitecturesSscModule
   ],
   providers: [],
   bootstrap: [AppComponent],

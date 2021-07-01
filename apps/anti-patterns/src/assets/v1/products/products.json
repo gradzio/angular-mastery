@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "products",
+      "attributes": {
+        "name": "Sport shoes",
+        "imageUrl": "https://images.unsplash.com/photo-1552346154-21d32810aba3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=105&h=105&q=80",
+        "price": "$100"
+      }
+    },
+    {
+      "id": 1,
+      "type": "products",
+      "attributes": {
+        "name": "Leather jacket",
+        "imageUrl": "https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=105&h=105&q=80",
+        "price": "$300"
+      }
+    }
+  ]
+}
