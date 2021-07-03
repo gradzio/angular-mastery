@@ -7,3 +7,20 @@ export interface GetsProducts {
 }
 
 export const GETS_PRODUCTS = new InjectionToken<GetsProducts>('GET_PRODUCTS');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
